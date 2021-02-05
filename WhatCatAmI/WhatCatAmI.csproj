@@ -10,5 +10,7 @@
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
 
+  <ProjectExtensions><VisualStudio><UserProperties properties_4launchsettings_1json__JsonSchema="https://json.schemastore.org/launchsettings" /></VisualStudio></ProjectExtensions>
+
 
 </Project>
