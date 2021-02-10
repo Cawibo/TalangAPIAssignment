@@ -15,15 +15,16 @@ function App() {
   }
 
   const onChange = event => {
-    //console.log(event.target.value);
     setName(event.target.value);
+    //console.log(cat)
   }
 
-  
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={cat.url} className="App-logo" alt="logo" />
+        <h2>{cat.name}</h2>
         <div className="inputField">
           <form onSubmit={onSubmit}>
             <input type="text" value={name} onChange={onChange} placeholder="Cat name..."></input>
