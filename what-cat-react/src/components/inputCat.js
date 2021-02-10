@@ -1,5 +1,6 @@
 import React, { Component, useState } from 'react';
 import {apiClient} from '../api/api-client';
+import './inputCat.css';
 
 export const InputCat = (props) => {
   const [name, setName] = useState("");
@@ -16,10 +17,10 @@ export const InputCat = (props) => {
   }
 
   return (
-    <div className="inputField">
-        <form onSubmit={onSubmit}>
-            <input type="text" value={name} onChange={onChange} placeholder="Cat name..."></input>
-            <button>Find a cat!</button>
+    <div className="form__group field">
+        <form autocomplete="off" onSubmit={onSubmit}>
+            <input value={name} onChange={onChange} type="input" className="form__field" placeholder="Name" name="name" id='name' required ></input>
+            <label htmlFor="name" className="form__label">Name</label>
         </form>
     </div>
   );
