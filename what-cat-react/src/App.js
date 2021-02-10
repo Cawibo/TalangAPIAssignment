@@ -1,10 +1,10 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import logo from './logo.svg';
 import {apiClient} from './api/api-client';
 
 function App() {
-  const [cat, setCat] = useState({});
+  const [cat, setCat] = useState({name:'', url:logo});
   const [name, setName] = useState("");
 
   const onSubmit = (event) => {
@@ -23,6 +23,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h1>Find your cat!</h1>
         <img src={cat.url} className="App-logo" alt="logo" />
         <h2>{cat.name}</h2>
         <div className="inputField">
